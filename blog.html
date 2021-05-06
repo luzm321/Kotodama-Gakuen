@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotodama Gakuen</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- The bootstrap cdn link on top is for responsive web design for mobile to use google font awesome icons -->
+</head>
+
+<body>
+    <section class="blog-header">
+        <nav>
+            <a href="index.html"><img src="./images/logo.png" alt=""/></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul class="navUl">
+                    <li class="navList"><a class="navLink" href="index.html">HOME</a></li>
+                    <li class="navList"><a class="navLink" href="about.html">ABOUT</a></li>
+                    <li class="navList"><a class="navLink" href="course.html">COURSE</a></li>
+                    <li class="navList"><a class="navLink" href="blog.html">BLOG</a></li>
+                    <li class="navList"><a class="navLink" href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1 class="courseHeader">~Our Certificate & Online Programs for 2021~</h1>
+    </section>
+
+    <!-- Blog Page Content -->
+
+    <section class="blog-content">
+        <div class="row">
+            <div class="blog-left">
+                <img src="images/graduateCap.jpg" alt="">
+                <h2>~Our Certificate & Online Programs for 2021~</h2>
+                <p class=courseParagraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde necessitatibus<br>
+                dolorum, at sit perspiciatis autem pariatur, soluta delectus maiores assumenda?<br> 
+                Accusantium vitae exercitationem!</p>
+                <br>
+                <p class=courseParagraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate, doloribus<br>
+                deleniti tenetur debitis nobis, expedita adipisci neque distinctio similique sint sit.<br> 
+                Enim, culpa?</p>
+                <br>
+                <p class=courseParagraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo corporis<br>
+                impedit beatae. Aliquam, asperiores inventore. Obcaecati itaque provident<br>
+                adipisci deserunt dolore.</p>
+                <br>
+                <p class=courseParagraph>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit iste, nesciunt<br>
+                omnis vitae qui reiciendis et quo itaque suscipit fuga dolor, nam voluptatibus!</p>
+
+                <div class="comment-box">
+                    <h3>~Leave A Comment~</h3>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Enter Name">
+                        <input type="email" placeholder="Enter Email">
+                        <textarea rows="5" placeholder="Your Comment..."></textarea>
+                        <button type="submit" class="title-btn about-btn">POST COMMENT</button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="blog-right">
+                <h3>~Post Categories~</h3>
+                <div>
+                    <span>Auror</span>
+                    <span>21</span>
+                </div>
+                <div>
+                    <span>Aurologist</span>
+                    <span>3</span>
+                </div>
+                <div>
+                    <span>Arithmancer</span>
+                    <span>20</span>
+                </div>
+                <div>
+                    <span>Alchemist</span>
+                    <span>10</span>
+                </div>
+                <div>
+                    <span>Apparition Examiner</span>
+                    <span>15</span>
+                </div>
+                <div>
+                    <span>Element Mancer</span>
+                    <span>18</span>
+                </div>
+                <div>
+                    <span>Enchanter/Enchantress</span>
+                    <span>7</span>
+                </div>
+                <div>
+                    <span>Spellcaster</span>
+                    <span>13</span>
+                </div>
+                <div>
+                    <span>Ministry of Magic Constituent</span>
+                    <span>16</span>
+                </div>
+                <div>
+                    <span>Herbologist</span>
+                    <span>6</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+
+    <section class="footer">
+        <h4 class="footHeader">~ABOUT US~</h4>
+        <p class="courseParagraph">Kotodama Gakuen is devoted to excellence in indoctrinating, learning, research, and to developing leaders in many disciplines who make a difference globally in our magical realm.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made With <i class="fa fa-heart-o"></i></p>
+    </section>
+
+
+    <!-- JavaScript below for Toggle Menu when you right click and inspect on webpage for small screen and mobile devices onclick on navLinks -->
+
+    <script>
+
+        let navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        };
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        };
+
+    </script>
+    
+</body>
+
+</html>
