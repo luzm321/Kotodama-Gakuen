@@ -1,0 +1,486 @@
+/* The asterisk means margin and padding will be applicable to all html elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kaushan Script', cursive;
+}
+/* 100vh means 100% of the viewport height. 100vw; 100% of the width. Very handy when doing full screen slides */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/castle.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+/* For home background image, can try using parallax */
+nav img {
+    width: 135px;
+    height: auto;
+    border-radius: 60px;
+}
+
+nav img:hover {
+    transform: scaleX(-1);
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.navList {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    cursor: pointer;
+}
+
+.navList::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #138ada;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    transform:skew(10deg, -8deg) scaleY(.80);
+    
+}
+/* Try to make it so that when clicked, the link is highlighted wherever you are there */
+.navList:hover::after {
+    width: 100%;
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+/* The code below with transform allows the div/textbox to be in center position of page */
+.text-box {
+    width: 90%;
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.title {
+    font-size: 65px;
+}
+
+.titleParagraph {
+    margin: 10px 0px 40px;
+    font-size: 18px;
+    color: white;
+}
+
+.title-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid whitesmoke;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.title-btn:hover {
+    border: 1px solid #138ada;
+    background: #138ada;
+    transition: 1s;
+}
+
+/* This must be outside of media query to hide the menu bar and close x icons on webpage for mobile view in html font awesome icon cdn so icons will be
+hidden for large screen devices and will show for smaller screen devices */
+nav .fa {
+    display: none;
+}
+
+/* This media query allows webpage to be responsive for mobile devices  where max width is whatever you set */
+@media(max-width: 700px) {
+    .title {
+        font-size: 25px;
+    }
+    .navList {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #138ada;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    /* bottom code allows for icons to be visible in small screen devices */
+    nav .fa {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .navUl {
+        padding: 30px;
+    }
+}
+
+/* Course styling */
+
+.course {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+    background: rgb(228, 228, 220);
+}
+
+.courseHeader {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.courseParagraph {
+    color:black;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.courseParagraph::first-letter {
+    font-size: 350%;
+    /* color: rgb(54, 189, 160); */
+    color: #6eaed8;
+    border-radius: 100px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rowParagraph {
+    /* font-size: 18px; */
+    font-size: 15px;
+}
+
+.rowParagraph::first-letter {
+    font-size: 350%;
+    /* color: rgb(54, 189, 160); */
+    color: black;
+    border-radius: 100px;
+}
+
+.course-col {
+    /* flex-basis: 31%; original */
+    flex-basis: 33%;
+    /* background: #fff3f3; */
+    background:  #6eaed8;
+    /* border-radius: 10px; original */
+    /* width: 400px;
+    height: 450px; */
+    width: 35px;
+    height: 350px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    margin-bottom: 5%;
+    /* padding:  20px 12px; original*/
+    padding: 20px 30px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.col-title {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 30px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Campus styling */
+
+.campus {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+    background: rgb(216, 210, 210);
+}
+
+.campus-col {
+    flex-basis: 32%;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img {
+    width: 95%;
+    height: 100%;
+    margin-left: 10px;
+    display: block;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(199, 217, 240, 0.7);
+}
+
+.country {
+    width: 100%;
+    font-weight: 500;
+    color: #138ada;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* Facilities styling */
+
+.facilities {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+    background: rgb(228, 228, 220);
+}
+
+.facilities-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.facilities-col img {
+    width: 95%;
+    height: 75%;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.pool {
+    width: 50%;
+    height: 75%;
+}
+
+.facilParagraph {
+    padding: 0;
+    margin-left: 10px;
+}
+
+.facilHeader {
+    margin-top: 16px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Testimonials */
+
+.testimonials {
+    width: 100%;
+    margin: auto;
+    padding-top: 60px;
+    text-align: center;
+    background: rgb(216, 210, 210);
+}
+
+.testimonial-col {
+    flex-basis: 27.5%;
+    border-bottom-right-radius: 70px;
+    border-top-left-radius: 70px;
+    margin-bottom: 5%;
+    margin-right: 15px;
+    margin-left: 15px;
+    text-align: left;
+    background: #6eaed8;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonial-col img {
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testiParagraph {
+    padding: 0;
+}
+
+.testiHeader {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.testimonial-col .fa {
+    color:rgb(216, 210, 210);
+}
+
+@media(max-width: 700px) {
+    .testimonial-col img {
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+}
+
+/* Call To Action styling */
+
+.cta {
+    /* margin: 100px auto; */
+    margin: 0 auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/online.jpg);
+    background-position: center;
+    background-size: cover;
+    /* border-radius: 10px; */
+    text-align: center;
+    padding: 100px 0;
+}
+
+.ctaHeader {
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width: 700px) {
+    .ctaHeader {
+        font-size: 24px;
+    }
+}
+
+/* footer styling */
+
+.footer {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 30px 0;
+    background: rgb(228, 228, 220);
+}
+
+.footHeader {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fa {
+    color:  #6eaed8;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-heart-o {
+    color: #6eaed8;
+}
+
+/* About Us Page */
+
+.sub-header {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/gradGif.gif);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header h1 {
+    margin-top: -40px;
+}
+
+.about-us {
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.about-col {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col img {
+    width: 110%;
+    height: 110%;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+}
+
+.about-col h1 {
+    padding-top: 0;
+    font-size: 30px;
+}
+
+.about-col p {
+    padding: 15px 0 25px;
+}
+
+.about-btn {
+    border: 1px solid #138ada;
+    background: transparent;
+    color: #138ada;
+}
+
+.about-btn:hover {
+    color: whitesmoke;
+}

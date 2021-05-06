@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotodama Gakuen</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- The bootstrap cdn link on top is for responsive web design for mobile to use google font awesome icons -->
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="./images/logo.png" alt=""/></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul class="navUl">
+                    <li class="navList"><a class="navLink" href="">HOME</a></li>
+                    <li class="navList"><a class="navLink" href="">ABOUT</a></li>
+                    <li class="navList"><a class="navLink" href="">COURSE</a></li>
+                    <li class="navList"><a class="navLink" href="">BLOG</a></li>
+                    <li class="navList"><a class="navLink" href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1 class="courseHeader">~About Us~</h1>
+    </section>
+
+    <!-- About Us Content -->
+
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1 class="courseParagraph">We Are Asia's Largest Magic University!</h1>
+                <p>Established around the 10th century, Kotodama was considered to be one of the finest magical institutions in the Wizarding World particularly in Asia, though other notable schools included Hogwarts School of Witchcraft and Wizardry in London, Beauxbatons Academy of Magic in France, the Durmstrang Institute implied to be in northern Europe, and Ilvermorny School of Witchcraft and Wizardry in the United States.
+                    <br><br>Children with magical abilities were enrolled at birth, and acceptance was confirmed by owl post at age eleven. However, if the child in question was a Muggle-born, a staff member from the school visited the child and his or her family in order to inform them of their magical heritage and the existence of the Wizarding world.</p>
+                <a href="" class="title-btn about-btn">EXPLORE NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="images/tokyo.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <section class="footer">
+        <h4 class="footHeader">~ABOUT US~</h4>
+        <p class="courseParagraph">Kotodama Gakuen is devoted to excellence in indoctrinating, learning, research, and to developing leaders in many disciplines who make a difference globally in our magical realm.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made With <i class="fa fa-heart-o"></i></p>
+    </section>
+
+
+    <!-- JavaScript below for Toggle Menu when you right click and inspect on webpage for small screen and mobile devices onclick on navLinks -->
+
+    <script>
+
+        let navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        };
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        };
+
+    </script>
+    
+</body>
+
+</html>
